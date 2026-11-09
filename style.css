@@ -32,7 +32,18 @@ body {
   max-width: 1280px;
   margin: 0 auto;
 }
-
+.header__menu {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .header__nav {
+    flex-wrap: wrap;
+  }
+  .header__menu {
+    display: block;
+    font-size: 28px;
+  }
+}
 .header__logo {
   display: flex;
   align-items: center;
@@ -53,7 +64,17 @@ body {
   object-fit: contain;
   margin-right: 12px;
 }
-
+@media (max-width: 1024px) {
+  .header__nav-links {
+    display: none;
+  }
+  .menu-open .header__nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 24px;
+  }
+}
 .header__logo-text {
   color: #243e63;
   font-family: Inter, system-ui;
